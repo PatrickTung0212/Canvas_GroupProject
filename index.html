@@ -17,7 +17,46 @@
    
   </head>
   <body class="container">
-    <h1>Canvas Application</h1>
+      <div class="function-bar">
+          <div>      
+              <h1>Canvas Application</h1>
+            </div>
+        <div class="buttons">
+            <!-- The drawing rectangle button  -->
+            <span class="btn btn-primary fa fa-square" id="drawing-rectangle"
+            >Draw Rectangle</span
+            >
+            <!-- The drawing line button  -->
+            <span class="btn btn-info fa fa-paint-brush" id="drawing-line"
+            >Draw Line</span
+            > 
+
+            <!-- Fake buttons below -->
+            <span class="btn btn-primary fa fa-square" id=""
+            >Redo</span
+            >
+            <!-- The drawing line button  -->
+            <span class="btn btn-primary fa fa-square" id=""
+            >Undo</span
+            > <span class="btn btn-primary fa fa-square" id=""
+            >Circle</span
+            >
+            <!-- The drawing line button  -->
+            <span class="btn btn-primary fa fa-square" id=""
+            >Eraser</span
+            > <span class="btn btn-primary fa fa-square" id=""
+            >Draw Rectangle</span
+            >
+            <!-- The drawing line button  -->
+            <span class="btn btn-primary fa fa-square" id=""
+            >Draw Line</span
+            > 
+            <div class="color-pick">
+                <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+            </div>
+        
+        </div>
+    </div>
     <div id="canvas-container">
       <canvas
         id="canvas-real"
@@ -32,15 +71,7 @@
         height="720px"
       ></canvas>
     </div>
-    <div class="buttons">
-      <!-- The drawing rectangle button  -->
-      <span class="btn btn-primary fa fa-square" id="drawing-rectangle"
-        >Draw Rectangle</span
-      >
-      <!-- The drawing line button  -->
-      <span class="btn btn-info fa fa-paint-brush" id="drawing-line"
-        >Draw Line</span
-      > 
+
       <!-- jQuery -->
       <script
       src="https://code.jquery.com/jquery-3.5.1.js"
