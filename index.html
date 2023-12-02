@@ -32,11 +32,11 @@
             > 
 
             <!-- Fake buttons below -->
-            <span class="btn btn-primary fa fa-square" id=""
+            <span class="btn btn-primary fa fa-square" id="Redo"
             >Redo</span
             >
             <!-- The drawing line button  -->
-            <span class="btn btn-primary fa fa-square" id=""
+            <span class="btn btn-primary fa fa-square" id="Undo"
             >Undo</span
             > <span class="btn btn-primary fa fa-square" id=""
             >Circle</span
@@ -96,13 +96,18 @@
     ></script>
     <script type="text/javascript">
     $(()=>{
-      currentFunction =  new DrawingLine(contextReal)
+      currentFunction =  null;
       $("#drawing-rectangle").click(() => {
         currentFunction = new DrawingRectangle(contextReal, contextDraft);
       });
       $("#drawing-line").click(() => {
         currentFunction = new DrawingLine(contextReal);
       });  
+   
+      
+      
+
+
     })
     </script>
   </body>
