@@ -1,0 +1,11 @@
+#mycanvas, #mycanvasdraft {
+    border: 1px solid red;
+}
+
+canvas {
+    position: absolute;
+}
+
+#circle {
+    margin-top: 300px;
+}
