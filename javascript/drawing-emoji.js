@@ -1,3 +1,10 @@
+let styleGuide = {  drawColor: "rgb(0,0,0)", fillColor: "rgb(0,0,255)", penWidth: 10, 
+                    dashed: [], lineCap: "round", // for dashes, put in the distance, for none make array empty
+                    emojiSource: '', emojiLength: 72, backgroundColor: 'white',
+                    textSize: 15, font: 'Arial'
+                };
+
+
 class DrawingEmoji extends PaintFunction{
     constructor(contextReal, contextDraft){
         super();
@@ -20,7 +27,7 @@ class DrawingEmoji extends PaintFunction{
         this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
     }
     onMouseUp(){
-        beforeDraw();
+        // beforeDraw();
     }
     onMouseLeave(coord){
         this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
