@@ -19,12 +19,17 @@ class DrawCircle extends PaintFunction {
         this.contextDraft.fillStyle = "#f44";
         this.contextDraft.clearRect(0, 0,  canvasDraft.width,  canvasDraft.height);
 
+        const centerX = (coord[0] + this.x1) / 2;
+        const centerY = (coord[1] + this.y1) / 2;
+        const radiusX = Math.abs(coord[0] - this.x1) / 2;
+        const radiusY = Math.abs(coord[1] - this.y1) / 2;
+
         this.contextDraft.beginPath();
         this.contextDraft.ellipse(
-            this.x1,
-            this.y1,
-            Math.abs(coord[0] - this.x1),
-            Math.abs(coord[1] - this.y1),
+            centerX,
+            centerY,
+            radiusX,
+            radiusY,
             0,
             0,
             2 * Math.PI
@@ -38,18 +43,23 @@ class DrawCircle extends PaintFunction {
         this.contextReal.fillStyle = "#f44";
         this.contextDraft.fillStyle = "#f44";
         this.contextDraft.clearRect(0, 0,  canvasDraft.width,  canvasDraft.height);
+        
+        const centerX = (coord[0] + this.x1) / 2;
+        const centerY = (coord[1] + this.y1) / 2;
+        const radiusX = Math.abs(coord[0] - this.x1) / 2;
+        const radiusY = Math.abs(coord[1] - this.y1) / 2;
+
         this.contextReal.beginPath();
         this.contextReal.ellipse(
-            this.x1,
-            this.y1,
-            Math.abs(coord[0] - this.x1),
-            Math.abs(coord[1] - this.y1),
+            centerX,
+            centerY,
+            radiusX,
+            radiusY,
             0,
             0,
             2 * Math.PI
         );
         this.contextReal.fill();
-
     }
 
     //No need
