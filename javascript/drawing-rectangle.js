@@ -16,6 +16,7 @@ class DrawingRectangle extends PaintFunction {
     this.contextReal.fillStyle = "#f44";
     this.origX = coord[0];
     this.origY = coord[1];
+    
   }
 
   onDragging(coord, event) {
@@ -41,6 +42,8 @@ class DrawingRectangle extends PaintFunction {
 
   // Committing the element to the canvas
   onMouseUp(coord) {
+    
+
     // Clearing the rectangle first
     this.contextDraft.clearRect(
       0,
@@ -58,6 +61,8 @@ class DrawingRectangle extends PaintFunction {
     );
 
     beforeDraw();
+
+    
   }
   onMouseLeave() {}
   onMouseEnter() {}

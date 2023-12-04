@@ -2,6 +2,8 @@ let ourCanvas = $('#canvas-real');
 let undoDataStack = [];
 let redoDataStack = [];
 
+let init = false;
+
 
 function beforeDraw() {
     var lastMove = ourCanvas[0].toDataURL();
@@ -17,7 +19,7 @@ $('#Undo').click(function undo () {
     }else if (undoDataStack.length == 1) {
         contextReal.fillStyle = "#ffffff";
         contextReal.fillRect(0,0,canvasDraft.width,canvasDraft.height);
-    } else if (undoDataStack.length > 1) {
+    } else if (undoDataStack.length > 1) {    
         var lastStep = new Image();
         lastStep.src = undoDataStack[undoDataStack.length - 2];
         lastStep.onload = function (){

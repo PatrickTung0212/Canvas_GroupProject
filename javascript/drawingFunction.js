@@ -20,6 +20,16 @@ $(() => {
         console.log("Straight line btn")
     });
 
+    $("#Curve").click(() => {
+        currentFunction = new DrawingCurve(contextReal, contextDraft);
+        console.log("Curve line btn")
+    });
+
+    $("#Text").click(() => {
+        currentFunction = new Text(contextReal, contextDraft);
+        console.log("Text btn")
+    });
+
 
 
 
