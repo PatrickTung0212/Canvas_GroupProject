@@ -14,16 +14,19 @@ class DrawingLine extends PaintFunction {
   }
 
   // On mouse down, ensure that the pen has these features
-  onMouseDown(coord, event) {
-    // Fill in the color
-    this.context.strokeStyle = "#df4b26";
-    // Kind of line
-    this.context.lineJoin = "round";
-    // Width of line
-    this.context.lineWidth = 5;
+  onMouseDown(coord, styleGuide, event) {
+    setCanvasToStyleGuide(1);
+    // // Fill in the color
+    // this.context.strokeStyle = "#df4b26";
+    // // Kind of line
+    // this.context.lineJoin = "round";
+    // // Width of line
+    // this.context.lineWidth = 5;
     // Drawing the line here
     this.context.beginPath();
     this.context.moveTo(coord[0], coord[1]);
+
+    this.draw(coord[0],coord[1]);
   }
   // Clicking and removing your mouse
   onDragging(coord, event) {
@@ -31,7 +34,9 @@ class DrawingLine extends PaintFunction {
   }
 
   onMouseMove() {}
-  onMouseUp() {}
+  onMouseUp() {
+    beforeDraw();
+  }
   onMouseLeave() {}
   onMouseEnter() {}
 
@@ -39,6 +44,7 @@ class DrawingLine extends PaintFunction {
     //
     this.context.lineTo(x, y);
     // Draw the line onto the page
+    
     this.context.stroke();
   }
 }

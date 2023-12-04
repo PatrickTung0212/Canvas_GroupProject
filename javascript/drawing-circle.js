@@ -43,7 +43,7 @@ class DrawCircle extends PaintFunction {
         this.contextReal.fillStyle = "#f44";
         this.contextDraft.fillStyle = "#f44";
         this.contextDraft.clearRect(0, 0,  canvasDraft.width,  canvasDraft.height);
-        
+
         const centerX = (coord[0] + this.x1) / 2;
         const centerY = (coord[1] + this.y1) / 2;
         const radiusX = Math.abs(coord[0] - this.x1) / 2;
@@ -60,6 +60,8 @@ class DrawCircle extends PaintFunction {
             2 * Math.PI
         );
         this.contextReal.fill();
+
+        beforeDraw();
     }
 
     //No need
