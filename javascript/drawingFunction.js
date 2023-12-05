@@ -30,6 +30,13 @@ $(() => {
         console.log("Text btn")
     });
 
+    $("#BCurve").click(() => {
+        currentFunction = new DrawBCurve(contextReal, contextDraft);
+        console.log("BCurve btn")
+    });
+
+
+
 
 
 
