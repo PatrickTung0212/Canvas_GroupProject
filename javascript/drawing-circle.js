@@ -5,18 +5,19 @@ class DrawCircle extends PaintFunction {
         this.contextDraft = contextDraft;
     }
 
-    onMouseDown(coord, e) {
+    onMouseDown(coord, styleGuide, e) {
+        setCanvasToStyleGuide(1);
         
-        this.contextReal.fillStyle = "#f44";
-        this.contextDraft.fillStyle = "#f44";
+        // this.contextReal.fillStyle = "#f44";
+        // this.contextDraft.fillStyle = "#f44";
         this.x1 = coord[0];
         this.y1 = coord[1];
     }
 
     //Draw canvas draft
     onDragging(coord, e) {
-        this.contextReal.fillStyle = "#f44";
-        this.contextDraft.fillStyle = "#f44";
+        // this.contextReal.fillStyle = "#f44";
+        // this.contextDraft.fillStyle = "#f44";
         this.contextDraft.clearRect(0, 0,  canvasDraft.width,  canvasDraft.height);
 
         const centerX = (coord[0] + this.x1) / 2;
@@ -40,8 +41,8 @@ class DrawCircle extends PaintFunction {
     //Clear canvas draft
     //Draw canvas real
     onMouseUp(coord, e) {
-        this.contextReal.fillStyle = "#f44";
-        this.contextDraft.fillStyle = "#f44";
+        // this.contextReal.fillStyle = "#f44";
+        // this.contextDraft.fillStyle = "#f44";
         this.contextDraft.clearRect(0, 0,  canvasDraft.width,  canvasDraft.height);
 
         const centerX = (coord[0] + this.x1) / 2;

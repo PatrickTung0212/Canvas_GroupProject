@@ -16,3 +16,10 @@ $('#dashed-toggle').change( function() {
          setCanvasToStyleGuide();
     }
  });
+
+ $('#colorbox')[0].oninput = function () {
+    console.log("changeColor");
+    styleGuide.drawColor = this.value;
+    // document.documentElement.style.setProperty("--color", this.value);
+  };
+
