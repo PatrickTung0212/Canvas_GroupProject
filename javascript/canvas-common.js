@@ -10,9 +10,9 @@ let contextDraft = canvasDraft.getContext("2d");
 let currentFunction;
 let dragging = false;
 
-contextReal.fillStyle =  'rgba(255, 255, 255, 1)';
-contextReal.fillRect(0,0,canvasDraft.width,canvasDraft.height);
-contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
+contextReal.fillStyle = 'rgba(255, 255, 255, 1)';
+contextReal.fillRect(0, 0, canvasDraft.width, canvasDraft.height);
+contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
 
 $("#canvas-draft").mousedown(function (e) {
   if (currentFunction == null) {
@@ -22,7 +22,7 @@ $("#canvas-draft").mousedown(function (e) {
   let mouseX = e.offsetX;
   let mouseY = e.offsetY;
 
-  currentFunction.onMouseDown([mouseX, mouseY],styleGuide, e);
+  currentFunction.onMouseDown([mouseX, mouseY], styleGuide, e);
   dragging = true;
 });
 
@@ -35,9 +35,9 @@ $("#canvas-draft").mousemove(function (e) {
   let mouseY = e.offsetY;
 
   if (dragging) {
-    currentFunction.onDragging([mouseX, mouseY],styleGuide, e);
+    currentFunction.onDragging([mouseX, mouseY], styleGuide, e);
   }
-  currentFunction.onMouseMove([mouseX, mouseY], styleGuide,e);
+  currentFunction.onMouseMove([mouseX, mouseY], styleGuide, e);
 });
 
 $("#canvas-draft").mouseup(function (e) {
@@ -47,7 +47,7 @@ $("#canvas-draft").mouseup(function (e) {
   dragging = false;
   let mouseX = e.offsetX;
   let mouseY = e.offsetY;
-  currentFunction.onMouseUp([mouseX, mouseY],styleGuide, e);
+  currentFunction.onMouseUp([mouseX, mouseY], styleGuide, e);
 });
 
 $("#canvas-draft").mouseleave(function (e) {
@@ -57,7 +57,7 @@ $("#canvas-draft").mouseleave(function (e) {
   dragging = false;
   let mouseX = e.offsetX;
   let mouseY = e.offsetY;
-  currentFunction.onMouseLeave([mouseX, mouseY],styleGuide, e);
+  currentFunction.onMouseLeave([mouseX, mouseY], styleGuide, e);
 });
 
 $("#canvas-draft").mouseenter(function (e) {
@@ -66,7 +66,7 @@ $("#canvas-draft").mouseenter(function (e) {
   }
   let mouseX = e.offsetX;
   let mouseY = e.offsetY;
-  currentFunction.onMouseEnter([mouseX, mouseY], styleGuide,e);
+  currentFunction.onMouseEnter([mouseX, mouseY], styleGuide, e);
 });
 
 function setCanvasToStyleGuide(multiplier) {
@@ -89,18 +89,18 @@ let styleGuide = {
   textSize: 15, font: 'Arial'
 };
 
-let keyListeners = {shift: false, escape: false} //, escape: false, delete: false, type: true} 
+let keyListeners = { shift: false, escape: false } //, escape: false, delete: false, type: true} 
 
-function deleteBoard () {
+function deleteBoard() {
   contextReal.fillStyle = 'rgba(255, 255, 255, 1)';
-  contextReal.fillRect(0,0,canvasDraft.width,canvasDraft.height);
-  contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
+  contextReal.fillRect(0, 0, canvasDraft.width, canvasDraft.height);
+  contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
 
 
   //Clear b curve function
-  if(currentFunction instanceof DrawBCurve){
+  if (currentFunction instanceof DrawBCurve) {
     currentFunction.cp1 = false;
-    currentFunction.cp2 = false;   
+    currentFunction.cp2 = false;
   }
 }
 

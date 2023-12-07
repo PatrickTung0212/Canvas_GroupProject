@@ -31,10 +31,95 @@
 #canvas-draft {
   background-color: transparent;
 }
+
 body {
   overflow: hidden;
   float: left;
 }
+
 #canvas-container {
   height: 720px;
+}
+
+/* Colors */
+.color-square-mini {
+  width: 25px;
+  height: 25px;
+  border-radius: 0px;
+  border: 1px black solid;
+}
+
+#color-square-mini-1 {
+  background-color: #000000;
+}
+
+#color-square-mini-2 {
+  background-color: #FFFFFF;
+}
+
+#color-square-mini-3 {
+  background-color: #FF0000;
+}
+
+#color-square-mini-4 {
+  background-color: #00FF00;
+}
+
+#color-square-mini-5 {
+  background-color: #0000FF;
+}
+
+#color-square-mini-6 {
+  background-color: #FFFF00;
+}
+
+#color-square-mini-7 {
+  background-color: #FFC0CB;
+}
+
+#color-square-mini-8 {
+  background-color: #FFA500;
+}
+
+#color-square-mini-9 {
+  background-color: #800080;
+}
+
+#color-square-mini-10 {
+  background-color: #00FFFF;
+}
+
+#color-square-mini-11 {
+  background-color: #A52A2A;
+}
+
+#color-square-mini-12 {
+  background-color: #808080;
+}
+
+
+/* Popular Colors */
+
+#color-square-popular-mini-1 {
+  background-color: #000000;
+}
+
+#color-square-popular-mini-2 {
+  background-color: #FFFFFF;
+}
+
+#color-square-popular-mini-3 {
+  background-color: #FF0000;
+}
+
+#color-square-popular-mini-4 {
+  background-color: #00FF00;
+}
+
+#color-square-popular-mini-5 {
+  background-color: #0000FF;
+}
+
+#color-square-popular-mini-6 {
+  background-color: #FFFF00;
 }

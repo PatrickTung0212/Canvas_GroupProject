@@ -1,10 +1,3 @@
-/**********************************************
- * Drawing Rectangle Functionality
- * ==================================
- * This class extends the PaintFunction class, which you can find in canvas-common
- ***********************************************/
-// https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/clearRect
-
 class DrawingRectangle extends PaintFunction {
   constructor(contextReal, contextDraft) {
     super();
@@ -17,7 +10,7 @@ class DrawingRectangle extends PaintFunction {
     setCanvasToStyleGuide(1);
     this.origX = coord[0];
     this.origY = coord[1];
-    
+
   }
 
   onDragging(coord, event) {
@@ -39,11 +32,11 @@ class DrawingRectangle extends PaintFunction {
     );
   }
 
-  onMouseMove() {}
+  onMouseMove() { }
 
   // Committing the element to the canvas
   onMouseUp(coord) {
-    
+
 
     // Clearing the rectangle first
     this.contextDraft.clearRect(
@@ -63,8 +56,8 @@ class DrawingRectangle extends PaintFunction {
 
     beforeDraw();
 
-    
+
   }
-  onMouseLeave() {}
-  onMouseEnter() {}
+  onMouseLeave() { }
+  onMouseEnter() { }
 }
