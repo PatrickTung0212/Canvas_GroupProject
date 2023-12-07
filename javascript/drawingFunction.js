@@ -35,6 +35,11 @@ $(() => {
         console.log("BCurve btn")
     });
 
+    $('#clear-button').click(()=>{
+        deleteBoard();
+        beforeDraw();
+    });
+
 
 
 

@@ -27,6 +27,7 @@ class DrawingLine extends PaintFunction {
     this.context.moveTo(coord[0], coord[1]);
 
     this.draw(coord[0],coord[1]);
+    
   }
   // Clicking and removing your mouse
   onDragging(coord, event) {

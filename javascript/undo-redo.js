@@ -1,4 +1,4 @@
-let ourCanvas = $('#canvas-real');
+// let ourCanvas = $('#canvas-real');
 let undoDataStack = [];
 let redoDataStack = [];
 
@@ -6,7 +6,7 @@ let init = false;
 
 
 function beforeDraw() {
-    var lastMove = ourCanvas[0].toDataURL();
+    var lastMove = canvasReal.toDataURL();
     undoDataStack.push(lastMove);
     redoDataStack = [];
 }
@@ -20,11 +20,15 @@ $('#Undo').click(function undo () {
         contextReal.fillStyle = "#ffffff";
         contextReal.fillRect(0,0,canvasDraft.width,canvasDraft.height);
     } else if (undoDataStack.length > 1) {    
-        var lastStep = new Image();
+        
+        var lastStep = new Image();      
         lastStep.src = undoDataStack[undoDataStack.length - 2];
-        lastStep.onload = function (){
-        contextReal.drawImage(lastStep, 0, 0);
-    };
+        lastStep.onload = function ()
+        {
+            //clear the last image first
+            contextReal.clearRect(0, 0, canvasReal.width, canvasReal.height); 
+            contextReal.drawImage(lastStep, 0, 0);
+        };
     }
     redoDataStack.push(undoDataStack.pop());
 })

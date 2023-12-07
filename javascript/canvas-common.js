@@ -87,5 +87,11 @@ let styleGuide = {
 
 let keyListeners = {shift: false, escape: false} //, escape: false, delete: false, type: true} 
 
+function deleteBoard () {
+  contextReal.fillStyle = '#FFFFFF';
+  contextReal.fillRect(0,0,canvasDraft.width,canvasDraft.height);
+  contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
+}
+
 
 

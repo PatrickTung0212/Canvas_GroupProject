@@ -5,7 +5,7 @@ class DrawCircle extends PaintFunction {
         this.contextDraft = contextDraft;
     }
 
-    onMouseDown(coord, styleGuide, e) {
+    onMouseDown(coord,  e) {
         setCanvasToStyleGuide(1);
         
         // this.contextReal.fillStyle = "#f44";
