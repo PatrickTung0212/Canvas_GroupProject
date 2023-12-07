@@ -91,6 +91,13 @@ function deleteBoard () {
   contextReal.fillStyle = '#FFFFFF';
   contextReal.fillRect(0,0,canvasDraft.width,canvasDraft.height);
   contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
+
+
+  //Clear b curve function
+  if(currentFunction instanceof DrawBCurve){
+    currentFunction.cp1 = false;
+    currentFunction.cp2 = false;   
+  }
 }
 
 
