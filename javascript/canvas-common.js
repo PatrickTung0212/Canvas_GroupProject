@@ -79,7 +79,7 @@ function setCanvasToStyleGuide(multiplier) {
 }
 
 let styleGuide = {
-  drawColor: "rgb(0,0,0)", fillColor: "rgb(0,0,255)", penWidth: 10,
+  drawColor: "rgb(0,0,0)", fillColor: "rgb(0,0,0)", penWidth: 10,
   dashed: [], lineCap: "round", // for dashes, put in the distance, for none make array empty
   emojiSource: '', emojiLength: 72, backgroundColor: 'white',
   textSize: 15, font: 'Arial'

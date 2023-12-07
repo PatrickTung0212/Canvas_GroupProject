@@ -20,6 +20,7 @@ $('#dashed-toggle').change( function() {
  $('#colorbox')[0].oninput = function () {
     console.log("changeColor");
     styleGuide.drawColor = this.value;
+    styleGuide.fillColor = this.value;
     // document.documentElement.style.setProperty("--color", this.value);
   };
 

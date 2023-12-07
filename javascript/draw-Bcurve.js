@@ -98,8 +98,14 @@ class DrawBCurve extends PaintFunction{
             // this.contextDraft.bezierCurveTo(coord[0],  coord[1],this.controlPointX, this.controlPointY,  this.endpointX,  this.endpointY)
             this.contextDraft.stroke();
 
-
+            this.contextReal.beginPath();
+            this.contextReal.moveTo(this.x1, this.y1);
+            this.contextReal.bezierCurveTo( this.controlPointX,  this.controlPointY, coord[0], coord[1],  this.endpointX,  this.endpointY)
+            // this.contextDraft.bezierCurveTo(coord[0],  coord[1],this.controlPointX, this.controlPointY,  this.endpointX,  this.endpointY)
+            this.contextReal.stroke();
             
+
+            beforeDraw();
         }
 
         if(this.cp1 == true && this.cp2 == false)
@@ -110,9 +116,15 @@ class DrawBCurve extends PaintFunction{
             this.contextDraft.bezierCurveTo(coord[0], coord[1], coord[0], coord[1],  this.endpointX,  this.endpointY)
             this.contextDraft.stroke();
 
+            // this.contextReal.beginPath();
+            // this.contextReal.moveTo(this.x1, this.y1);
+            // this.contextReal.bezierCurveTo(coord[0], coord[1], coord[0], coord[1],  this.endpointX,  this.endpointY)
+            // this.contextReal.stroke();
+
             this.cp2 = true;
             this.controlPointX = coord[0]
             this.controlPointY = coord[1]
+
         }
 
 
@@ -124,13 +136,20 @@ class DrawBCurve extends PaintFunction{
             this.contextDraft.bezierCurveTo(this.x1, this.y1, this.x1, this.y1, coord[0],coord[1])
             this.contextDraft.stroke();
 
+            // this.contextReal.beginPath();
+            // this.contextReal.moveTo(this.x1, this.y1);
+            // this.contextReal.bezierCurveTo(this.x1, this.y1, this.x1, this.y1, coord[0],coord[1])
+            // this.contextReal.stroke();
+
             this.cp1 = true;
             this.endpointX = coord[0]
             this.endpointY = coord[1]
+
+          
         }
 
     
-        beforeDraw();
+       
 
     }
 

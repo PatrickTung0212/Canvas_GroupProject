@@ -41,6 +41,7 @@ class DrawCircle extends PaintFunction {
     //Clear canvas draft
     //Draw canvas real
     onMouseUp(coord, e) {
+        
         // this.contextReal.fillStyle = "#f44";
         // this.contextDraft.fillStyle = "#f44";
         this.contextDraft.clearRect(0, 0,  canvasDraft.width,  canvasDraft.height);
