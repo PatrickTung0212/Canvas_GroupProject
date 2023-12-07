@@ -17,7 +17,7 @@ $('#Undo').click(function undo () {
         return;
     
     }else if (undoDataStack.length == 1) {
-        contextReal.fillStyle = "#ffffff";
+        contextReal.fillStyle = 'rgba(255, 255, 255, 1)';
         contextReal.fillRect(0,0,canvasDraft.width,canvasDraft.height);
     } else if (undoDataStack.length > 1) {    
         
@@ -25,8 +25,7 @@ $('#Undo').click(function undo () {
         lastStep.src = undoDataStack[undoDataStack.length - 2];
         lastStep.onload = function ()
         {
-            //clear the last image first
-            contextReal.clearRect(0, 0, canvasReal.width, canvasReal.height); 
+       
             contextReal.drawImage(lastStep, 0, 0);
         };
     }

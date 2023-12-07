@@ -10,6 +10,10 @@ let contextDraft = canvasDraft.getContext("2d");
 let currentFunction;
 let dragging = false;
 
+contextReal.fillStyle =  'rgba(255, 255, 255, 1)';
+contextReal.fillRect(0,0,canvasDraft.width,canvasDraft.height);
+contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
+
 $("#canvas-draft").mousedown(function (e) {
   if (currentFunction == null) {
     return;
@@ -88,7 +92,7 @@ let styleGuide = {
 let keyListeners = {shift: false, escape: false} //, escape: false, delete: false, type: true} 
 
 function deleteBoard () {
-  contextReal.fillStyle = '#FFFFFF';
+  contextReal.fillStyle = 'rgba(255, 255, 255, 1)';
   contextReal.fillRect(0,0,canvasDraft.width,canvasDraft.height);
   contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
 

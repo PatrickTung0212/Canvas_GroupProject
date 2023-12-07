@@ -1,5 +1,9 @@
 $(() => {
     currentFunction = null;
+
+ 
+
+
     $("#drawing-rectangle").click(() => {
         currentFunction = new DrawingRectangle(contextReal, contextDraft);
     });
