@@ -75,6 +75,11 @@ $('#filter-sliders').on('click', function (e) {
     $('#remove-all').click(() => {
         contextReal.canvas.style.filter = null;
         $('.filter-boxes input').prop('checked', false)
+        blurCheck = false;
+        grayCheck = false;
+        brightnessCheck = false;
+        invertCheck = false;
+        opacityCheck = false;
     })
 
 
