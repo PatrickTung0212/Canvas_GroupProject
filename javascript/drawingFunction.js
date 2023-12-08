@@ -45,7 +45,7 @@ $(() => {
     });
 
     $("#fill-btn").click(() => {
-        currentFunction = new Fill(contextReal, contextDraft);
+        currentFunction = new ColorBucket(contextReal, contextDraft);
         console.log("fill btn")
     });
 
@@ -54,6 +54,31 @@ $(() => {
         console.log("spray btn")
     });
 
+    
+    $('#zoom-in').click(()=>{
+        $('#canvas-container').css({ "cursor": "zoom-in" });
+        if (currentFunction instanceof Zoom) {
+        } 
+        else {
+            currentFunction = new Zoom(contextReal,contextDraft);
+           
+            $('#zoom-counter').show();
+        }
+        zooming = true;
+    });
+    
+    
+    $('#zoom-out').click(()=>{
+        $('#canvas-container').css({ "cursor": "zoom-out" });
+        if (currentFunction instanceof Zoom) {
+        } 
+        else {
+            currentFunction = new Zoom(contextReal,contextDraft);
+           
+            $('#zoom-counter').show();
+        }
+        zooming = false;
+    });
 
 
 
