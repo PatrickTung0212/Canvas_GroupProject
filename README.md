@@ -2,6 +2,10 @@
 
 Welcome to the Canvas Application! This user guide will provide you with instructions on how to utilize the application's features effectively.
 
+## Live Demo
+
+Check out the live demo of the Canvas Application [here](https://patrickCanvas.surge.sh).
+
 ## Getting Started
 
 1. Launch the Canvas Application on your device.
