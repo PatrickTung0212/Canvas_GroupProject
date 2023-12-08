@@ -79,3 +79,9 @@ var buttons = document.querySelectorAll('.btn');
       });
     });
 
+    $('#select-btn').click(() => {
+
+        currentFunction = new Selecting(contextReal,contextDraft);
+        
+     });
+
