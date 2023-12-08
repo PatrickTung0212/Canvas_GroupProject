@@ -14,7 +14,7 @@ class DrawBCurve extends PaintFunction {
     }
 
     onMouseDown(coord, styleGuide, event) {
-
+        setCanvasToStyleGuide(1);
         // this.contextReal.fillStyle = "#f44"
         // this.contextDraft.fillStyle = "#f44"
 

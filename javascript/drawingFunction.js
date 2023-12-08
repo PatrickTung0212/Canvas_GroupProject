@@ -44,6 +44,16 @@ $(() => {
         beforeDraw();
     });
 
+    $("#fill-btn").click(() => {
+        currentFunction = new Fill(contextReal, contextDraft);
+        console.log("fill btn")
+    });
+
+    $("#spray-btn").click(() => {
+        currentFunction = new DrawingBrush(contextReal);
+        console.log("spray btn")
+    });
+
 
 
 

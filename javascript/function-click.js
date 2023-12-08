@@ -55,3 +55,20 @@ $("#upload").change((e) => {
     reader.readAsDataURL(e.target.files[0]);
 });
 
+var buttons = document.querySelectorAll('.btn');
+
+    // Add event listener to each button
+    buttons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        // Remove the 'btn-secondary' class from all buttons
+        buttons.forEach(function(btn) {
+          btn.classList.remove('btn-secondary');
+          btn.classList.add('btn-primary');
+        });
+
+        // Add the 'btn-secondary' class to the clicked button
+        button.classList.add('btn-secondary');
+        button.classList.remove('btn-primary');
+      });
+    });
+

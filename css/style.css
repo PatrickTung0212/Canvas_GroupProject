@@ -16,7 +16,7 @@
   color: white;
   width: 30%;
   height: 1000px;
-  padding: 10%;
+  padding: 5%;
 }
 
 .buttons {
@@ -26,6 +26,7 @@
   row-gap: 4%;
   /* width: 100px;
   height: 100px; */
+  
 }
 
 #canvas-draft {
@@ -47,6 +48,7 @@ body {
   height: 25px;
   border-radius: 0px;
   border: 1px black solid;
+  cursor: pointer;
 }
 
 #color-square-mini-1 {
@@ -122,4 +124,31 @@ body {
 
 #color-square-popular-mini-6 {
   background-color: #FFFF00;
+}
+
+.selected {
+  border: 5px solid white; /* 添加選中時的邊框樣式 */
+}
+
+
+
+
+@media (max-width: 350px) {
+  
+
+}
+
+
+@media (min-width: 350px) and (max-width: 767px) {
+ 
+
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+  
+  
+}
+
+@media (min-width: 1024px) {
+ 
 }
