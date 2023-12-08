@@ -35,6 +35,8 @@ class DrawCircle extends PaintFunction {
             0,
             2 * Math.PI
         );
+        
+        this.contextDraft.stroke();
         this.contextDraft.fill();
     }
 
@@ -61,6 +63,8 @@ class DrawCircle extends PaintFunction {
             0,
             2 * Math.PI
         );
+
+        this.contextReal.stroke();
         this.contextReal.fill();
 
         beforeDraw();

@@ -3,19 +3,20 @@
   position: absolute;
   top: 20px;
   bottom: 0px;
-  left: 26%;
+  left: 600px;
   right: 0px;
+
 }
 
 .function-bar {
-  display: flex;
+  /* display: flex;
   justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column;  */
   background-color: black;
   color: white;
-  width: 30%;
-  height: 1000px;
+  width: 500px;
+  height: 1250px;
   padding: 5%;
 }
 
@@ -34,7 +35,7 @@
 }
 
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
   float: left;
 }
 

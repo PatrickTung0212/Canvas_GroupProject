@@ -8,6 +8,8 @@ class DrawingRectangle extends PaintFunction {
   onMouseDown(coord, event) {
     //this.contextReal.fillStyle = "#f44";
     setCanvasToStyleGuide(1);
+    // contextReal.setLineDash([]);
+    // contextDraft.setLineDash([]);
     this.origX = coord[0];
     this.origY = coord[1];
 
@@ -24,12 +26,12 @@ class DrawingRectangle extends PaintFunction {
       canvasDraft.height
     );
     // Pass in the original x and y coordinates, followed by the new coordinates that we get for position x and y
-    this.contextDraft.fillRect(
-      this.origX,
-      this.origY,
-      coord[0] - this.origX,
-      coord[1] - this.origY
-    );
+   
+    contextDraft.beginPath();
+    contextDraft.rect( this.origX, this.origY, coord[0] - this.origX, coord[1] - this.origY);
+    contextDraft.stroke();
+    contextDraft.fill();
+
   }
 
   onMouseMove() { }
@@ -47,12 +49,19 @@ class DrawingRectangle extends PaintFunction {
     );
     // Commit that drawing to context real
     // Without this commit, it won't actually draw
-    this.contextReal.fillRect(
-      this.origX,
-      this.origY,
-      coord[0] - this.origX,
-      coord[1] - this.origY
-    );
+    // this.contextReal.fillRect(
+    //   this.origX,
+    //   this.origY,
+    //   coord[0] - this.origX,
+    //   coord[1] - this.origY
+    // );
+
+    contextReal.beginPath();
+    contextReal.rect( this.origX, this.origY, coord[0] - this.origX, coord[1] - this.origY);
+    contextReal.stroke();
+    contextReal.fill();
+
+
 
     beforeDraw();
 

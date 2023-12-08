@@ -18,10 +18,16 @@ $('#dashed-toggle').change(function () {
 });
 
 $('#colorbox')[0].oninput = function () {
-    console.log("changeColor");
-    styleGuide.drawColor = this.value;
-    styleGuide.fillColor = this.value;
-    // document.documentElement.style.setProperty("--color", this.value);
+    console.log("changeDrawColor");
+    styleGuide.drawColor = hexToRgb(this.value);
+
+};
+
+
+$('#fillColor')[0].oninput = function () {
+    console.log("changeFillColor");
+    styleGuide.fillColor = hexToRgb(this.value);
+
 };
 
 //Downloads Image
@@ -60,6 +66,7 @@ var buttons = document.querySelectorAll('.btn');
     // Add event listener to each button
     buttons.forEach(function(button) {
       button.addEventListener('click', function() {
+        console.log("Selected" + button)
         // Remove the 'btn-secondary' class from all buttons
         buttons.forEach(function(btn) {
           btn.classList.remove('btn-secondary');

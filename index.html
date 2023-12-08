@@ -46,15 +46,19 @@
         <input type="color" id="colorbox" name="favcolor" value="#000000">
       </div>
 
-      <!-- <div class="color-pick">
+      <div class="color-pick">
         Fill color
         <input type="color" id="fillColor" name="favcolor" value="#000000">
-      </div> -->
+      </div>
 
       <div class="form-group">
         <label for="brush-range">Pen Width: <span id='brush-size-number'>10</span></label>
         <input id="brush-range" type="range" class="form-control-range" min=1 max=50 value=10 step=1>
       </div>
+
+      <spec id='dashed-div' class='style-switch'> Dashed <input type="checkbox" id="dashed-toggle" data-toggle="toggle"
+          data-size="mini" data-onstyle="warning" data-offstyle="info" data-on="Dashed" data-off="Solid"
+          data-width='60'></spec>
 
       <!-- Common Color -->
       <div class="row">
@@ -78,10 +82,10 @@
         </div>
       </div>
 
+      <!-- Popular Color -->
       <span class="fa fa-square btn-sm"> </span>
       <span class="fa fa-square btn-sm"> Popular color </span>
-
-      <!-- Popular Color -->
+         
       <div class="row">
         <div class=" col-4 col-md-4 col-xl-4">
           <div class="color-square-mini" id="color-square-popular-mini-1">-</div>
@@ -96,7 +100,58 @@
           <div class="color-square-mini" id="color-square-popular-mini-6">-</div>
         </div>
       </div>
-      
+
+      <div class='range-container' id="filter-sliders">
+        <div class='filter-slider-indiv'>
+          <form>
+            <div class="form-group-left filter-boxes">
+              <label>Blur: &nbsp</label><input class='checkboxes' type='checkbox' id='blur-box'></input>
+              <input id="blur-range" type="range" class="filter-control-range" min=0 max=10 value=0 step=1
+                style="width:85px">
+            </div>
+          </form>
+        </div>
+        <div class='filter-slider-indiv'>
+          <form>
+            <div class="form-group-left filter-boxes">
+              <label>Invert: &nbsp</label><input class='checkboxes' type='checkbox' id='invert-box'></input>
+              <input id="invert-range" type="range" class="filter-control-range filter-right" min=0 max=100 value=0
+                step=1 style="width:85px">
+            </div>
+          </form>
+        </div>
+        <div class='filter-slider-indiv'>
+          <form>
+            <div class="form-group-left filter-boxes">
+              <label>Grayscale: &nbsp</label><input class='checkboxes' type='checkbox' id='grayscale-box'></input>
+              <input id="grayscale-range" type="range" class="filter-control-range" min=0 max=100 value=0 step=1
+                style="width:85px">
+            </div>
+          </form>
+        </div>
+        <div class='filter-slider-indiv'>
+          <form>
+            <div class="form-group-right filter-boxes">
+              <label>Opacity: &nbsp</label><input class='checkboxes' type='checkbox' id='opacity-box'></input>
+              <input id="opacity-range" type="range" class="filter-control-range" min=0 max=100 value=100 step=1
+                style="width:85px">
+            </div>
+          </form>
+        </div>
+        <div class='filter-slider-indiv'>
+          <form>
+            <div class="form-group-right filter-boxes">
+              <label>Brightness: &nbsp</label><input class='checkboxes' type='checkbox' id='brightness-box'></input>
+              <input id="brightness-range" type="range" class="filter-control-range" min=0 max=100 value=100 step=1
+                style="width:85px">
+            </div>
+          </form>
+        </div>
+        <div class='filter-slider-indiv'>
+          <button id='remove-all'>Reset all</button>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -107,7 +162,7 @@
 
   <div class="fixed-bottom">
     <h1>test ver.</h1>
-    
+
 
   </div>
 
@@ -135,6 +190,8 @@
   <script src="./javascript/fill.js" type="text/javascript"></script>
   <script src="./javascript/spray.js" type="text/javascript"></script>
   <script src="./javascript/rgbToHex.js" type="text/javascript"></script>
+  <script src="./javascript/hexToRgb.js" type="text/javascript"></script>
+  <script src="./javascript/filter.js" type="text/javascript"></script>
 
 
   <script src="./javascript/drawingFunction.js" type="text/javascript"></script>
