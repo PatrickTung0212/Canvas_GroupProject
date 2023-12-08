@@ -38,4 +38,5 @@ The Canvas Application also provides additional features to streamline your work
 - **Undo/Redo**: Made a mistake? Use the undo and redo buttons in the toolbar to revert or reapply actions.
 - **Clear**: Click on the clear button to remove all drawings from the canvas.
 - **Save**: Preserve your artwork by clicking on the save button. Choose a location on your device to save the image file.
-- **Upload Image**: Import an existing image by clicking on the upload button and selecting an image file from your device.
+- **Upload Image**: Import an existing image by clicking on the upload button and selecting the image file.
+
