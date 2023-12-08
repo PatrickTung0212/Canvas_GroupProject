@@ -23,7 +23,7 @@ class DrawingBrush extends PaintFunction {
     // Clicking and removing your mouse
     onDragging(coord, event) {
     //   let color = styleGuide.drawColor;
-      let color = '#ff4444';
+      let color = rgbToHex(styleGuide.drawColor);
       let gradient = this.context.createRadialGradient(
         coord[0],
         coord[1],

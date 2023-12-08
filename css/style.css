@@ -26,7 +26,7 @@
   row-gap: 4%;
   /* width: 100px;
   height: 100px; */
-  
+
 }
 
 #canvas-draft {
@@ -41,6 +41,8 @@ body {
 #canvas-container {
   height: 720px;
 }
+
+
 
 /* Colors */
 .color-square-mini {
@@ -127,28 +129,25 @@ body {
 }
 
 .selected {
-  border: 5px solid white; /* 添加選中時的邊框樣式 */
+  border: 5px solid white;
+  /* 添加選中時的邊框樣式 */
+}
+
+.fixed-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  color: red;
 }
 
 
 
 
-@media (max-width: 350px) {
-  
-
-}
+@media (max-width: 350px) {}
 
 
-@media (min-width: 350px) and (max-width: 767px) {
- 
+@media (min-width: 350px) and (max-width: 767px) {}
 
-}
+@media (min-width: 767px) and (max-width: 991px) {}
 
-@media (min-width: 767px) and (max-width: 991px) {
-  
-  
-}
-
-@media (min-width: 1024px) {
- 
-}
+@media (min-width: 1024px) {}

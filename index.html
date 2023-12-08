@@ -42,8 +42,14 @@
       <span class="btn btn-primary fa fa-square btn-sm" id="spray-btn"> Spray </span>
 
       <div class="color-pick">
+        Draw color
         <input type="color" id="colorbox" name="favcolor" value="#000000">
       </div>
+
+      <!-- <div class="color-pick">
+        Fill color
+        <input type="color" id="fillColor" name="favcolor" value="#000000">
+      </div> -->
 
       <div class="form-group">
         <label for="brush-range">Pen Width: <span id='brush-size-number'>10</span></label>
@@ -72,7 +78,7 @@
         </div>
       </div>
 
-      <span class="fa fa-square btn-sm">   </span>
+      <span class="fa fa-square btn-sm"> </span>
       <span class="fa fa-square btn-sm"> Popular color </span>
 
       <!-- Popular Color -->
@@ -90,16 +96,20 @@
           <div class="color-square-mini" id="color-square-popular-mini-6">-</div>
         </div>
       </div>
-
-
-
+      
     </div>
   </div>
+
   <div id="canvas-container">
     <canvas id="canvas-real" class="canvas" width="1080px" height="720px"></canvas>
     <canvas id="canvas-draft" class="canvas" width="1080px" height="720px"></canvas>
   </div>
 
+  <div class="fixed-bottom">
+    <h1>test ver.</h1>
+    
+
+  </div>
 
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
@@ -124,6 +134,8 @@
   <script src="./javascript/change-color.js" type="text/javascript"></script>
   <script src="./javascript/fill.js" type="text/javascript"></script>
   <script src="./javascript/spray.js" type="text/javascript"></script>
+  <script src="./javascript/rgbToHex.js" type="text/javascript"></script>
+
 
   <script src="./javascript/drawingFunction.js" type="text/javascript"></script>
 
