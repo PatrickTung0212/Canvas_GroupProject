@@ -9,6 +9,19 @@
   /* cursor: pointer; */
 }
 
+.rightest{
+  
+  display: flex;
+  justify-content: right;
+  align-items: right;
+}
+
+.container{
+  background-color: #6f2525;
+  color: white;
+  font-family: 'Helsinki', sans-serif;
+}
+
 .function-bar {
   /* display: flex;
   justify-content: flex-start;
@@ -17,15 +30,50 @@
   background-color: black;
   color: white;
   width: 500px;
-  height: 1800px;
+  height: 900px;
   padding: 5%;
 }
 
-.buttons {
+.mainbutton {
   display: grid;
+  grid-template-columns: auto auto ;
+  column-gap: 0.5em;
+  row-gap: 1em;
+  background-color: white;
+  justify-content: center;
+  border-radius: 15px;
+  margin: 15px 20px 0px 20px;
+  padding: 15px 10px;
+  box-shadow: 2px 2px 4px 0px rgb(0 0 0 / 50%);
+}
+
+.functionbutton {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 1.5em;
+  row-gap: 1em;
+  background-color: white;
+  justify-content: center;
+  border-radius: 15px;
+  margin: 15px 20px 0px 20px;
+  padding: 15px 10px;
+  box-shadow: 2px 2px 4px 0px rgb(0 0 0 / 50%);
+}
+
+
+.color-pick{
+  color: black;
+}
+
+
+.buttons {
+  /* display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2%;
-  row-gap: 4%;
+  row-gap: 4%; */
+  margin: 5px;
+  border: black 2px solid;
+
   /* width: 100px;
   height: 100px; */
 
